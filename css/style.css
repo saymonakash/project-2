@@ -1,0 +1,224 @@
+/* --------------------------------
+------------- Theme CSS  ----------
+----------------------------------- */
+a{
+	cursor: pointer;
+}
+h1,h2,h3,h4,h5.h6,a{
+	font-family: 'Rubik', sans-serif;
+}
+.btn{
+	position: relative;
+	z-index: 1;
+}
+.btn::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #111;
+	border-radius: 2px;
+	z-index: -1;
+	transition:.4s;
+}
+.btn:hover::after{
+	width: 100%;
+}
+button:focus {
+	outline: 0
+}
+/*----- Header Part  ------- */
+#main-manu ul li a.active{
+	color:red!important;
+}
+#slider a i,
+a{
+	color: black!important;
+	font-weight: 500;
+	transition: .3s;
+}
+footer a:hover,
+footer a i:hover,
+#slider a i:hover,
+#news a:hover,
+#news a i:hover,
+header a:hover{
+	color: red!important;
+}
+.navbar .nav-item:hover .dropdown-menu{
+	display: block;
+}
+
+/*----- Slider Part  ------- */
+#slider{
+	background-image: url(../images/main-banner2.jpg);
+}
+#slider a i:hover{
+	transform: scale(2.5);
+}	
+/*----- About Part  ------- */
+#about .about-img-text{
+	height: 200px;
+	width: 200px;
+	background: url(../images/shape.png);
+	right:0;
+	bottom: 0;
+}
+/*----- Choose Us  Part  ------- */
+.play-animation-btn:hover{
+	color:rgb(214, 20, 20)!important;
+	background:#fff!important; 
+}
+.play-animation-btn{
+	right: 35%;
+    bottom: 15%;
+}
+.play-animation-btn::before{
+	content: "";
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: rgb(214, 20, 20)!important;
+	border-radius: 50%;
+	animation: play-btn 1.5s ease-out infinite;
+}
+@keyframes play-btn{
+	0%,30%{
+		transform: scale(0);
+		opacity: 1;
+	}
+	50%{
+		transform: scale(1.5);
+		opacity: .7;
+	}
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+.circle-before::before{
+	content: "";
+    position: absolute;
+	top: -115px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 90%;
+    height: 65%;
+    border-radius: 50%;
+    background: #fdebeb;
+    z-index: -1;
+}
+.choose-item{
+	transition: all .5s;
+}
+.choose-icon{
+	transition: all .5s;
+}
+.choose-item:hover{
+	transform: translateY(-10px);
+}
+.choose-item:hover .choose-icon{
+	color:#fff!important;
+	background: rgb(214, 20, 20)!important;
+}
+/*----- Funding  Part  ------- */
+.line-count::before{
+	content: "";
+    position: absolute;
+	left: -33px;
+    top: 18px;
+    width: 1px;
+    height: 76%;
+    background: #ff0303;
+}
+.text-count::before{
+	content: attr(data-counter);
+    height: 40px;
+    width: 40px;
+    left: -53px;
+    border: 1px solid red;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    background: #fffcfc;
+    line-height: 35px;
+    color: red;
+    font-size: 30px;
+}
+.funding-form{
+	background-color: #fdebeb;
+}
+form input,
+form select{
+	box-shadow:none !important;
+	cursor: pointer;
+}
+/*----- Loan Part  ------- */
+#loan-owl-carousel-1 a span i.active{
+	color: red !important;
+}
+#loan-owl-carousel-1 a.active::after {
+	content: '';
+	height: 1px;
+	width: 100%;
+	bottom: 0;
+	left:0;
+	background: rgb(185, 26, 26);
+	position: absolute;
+}
+.list li::before {
+	margin: 8px;
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #e73c3e;
+}
+a.active span i{
+	color: #e73c3e !important;
+}
+/*----- Team Part  ------- */
+#team span{
+	position: absolute;
+	bottom: 15%;
+	visibility: hidden;
+	transition: all .6s;
+	opacity: 0;
+}
+#team .card:hover span{
+	bottom: 22%;
+	visibility: visible;
+	opacity: 1;
+}
+#team .card a{
+	transition: .7s;
+}
+#team .card a:hover i{
+	color: white !important;
+	transition: .7s;
+	transform: scale(1.4);
+}
+#team .card a:hover{
+	background: red !important;
+	transition: .7s;
+}
+
+/*----- Footer Part  ------- */
+footer a i{
+	color: white !important;
+}
+#news a,
+footer a{
+	transition: all .8s;
+}
+#news a:hover,
+footer ul li a:hover{
+	letter-spacing: 2px !important;
+}
